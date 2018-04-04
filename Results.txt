@@ -1,0 +1,377 @@
+
+----------------------------------------------------------------
+
+J48(highest)
+
+----------------------------------------------------------------
+
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     opinion
+Instances:    7230
+Attributes:   3
+              category
+              polarity
+              compound
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+compound <= 0.3695
+|   compound <= -0.0127
+|   |   polarity <= -0.177778: negative (383.0/122.0)
+|   |   polarity > -0.177778
+|   |   |   compound <= -0.3412: negative (595.0/315.0)
+|   |   |   compound > -0.3412
+|   |   |   |   polarity <= 0.285714
+|   |   |   |   |   compound <= -0.296: neutral (113.0/64.0)
+|   |   |   |   |   compound > -0.296
+|   |   |   |   |   |   polarity <= -0.15: neutral (9.0/3.0)
+|   |   |   |   |   |   polarity > -0.15
+|   |   |   |   |   |   |   compound <= -0.2755
+|   |   |   |   |   |   |   |   polarity <= 0.04: positive (9.0/1.0)
+|   |   |   |   |   |   |   |   polarity > 0.04: negative (2.0)
+|   |   |   |   |   |   |   compound > -0.2755: negative (231.0/147.0)
+|   |   |   |   polarity > 0.285714
+|   |   |   |   |   compound <= -0.128: positive (33.0/14.0)
+|   |   |   |   |   compound > -0.128: negative (13.0/6.0)
+|   compound > -0.0127
+|   |   compound <= 0
+|   |   |   polarity <= 0.172222
+|   |   |   |   polarity <= 0.0025: neutral (1496.0/1014.0)
+|   |   |   |   polarity > 0.0025: objective (275.0/168.0)
+|   |   |   polarity > 0.172222: positive (216.0/137.0)
+|   |   compound > 0
+|   |   |   polarity <= 0.2525
+|   |   |   |   compound <= 0.191
+|   |   |   |   |   polarity <= 0.057702: negative (149.0/92.0)
+|   |   |   |   |   polarity > 0.057702
+|   |   |   |   |   |   compound <= 0.1511
+|   |   |   |   |   |   |   polarity <= 0.071429: objective (3.0)
+|   |   |   |   |   |   |   polarity > 0.071429
+|   |   |   |   |   |   |   |   compound <= 0.1491
+|   |   |   |   |   |   |   |   |   compound <= 0.0654
+|   |   |   |   |   |   |   |   |   |   compound <= 0.0387: positive (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   compound > 0.0387: negative (6.0/2.0)
+|   |   |   |   |   |   |   |   |   compound > 0.0654
+|   |   |   |   |   |   |   |   |   |   compound <= 0.0857
+|   |   |   |   |   |   |   |   |   |   |   polarity <= 0.188889: positive (4.0)
+|   |   |   |   |   |   |   |   |   |   |   polarity > 0.188889
+|   |   |   |   |   |   |   |   |   |   |   |   polarity <= 0.229167: neutral (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   polarity > 0.229167: positive (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   compound > 0.0857
+|   |   |   |   |   |   |   |   |   |   |   compound <= 0.1012: negative (3.0)
+|   |   |   |   |   |   |   |   |   |   |   compound > 0.1012: positive (9.0/4.0)
+|   |   |   |   |   |   |   |   compound > 0.1491: objective (3.0/1.0)
+|   |   |   |   |   |   compound > 0.1511
+|   |   |   |   |   |   |   compound <= 0.1779: positive (13.0/3.0)
+|   |   |   |   |   |   |   compound > 0.1779: negative (2.0/1.0)
+|   |   |   |   compound > 0.191
+|   |   |   |   |   polarity <= -0.216667
+|   |   |   |   |   |   compound <= 0.2244
+|   |   |   |   |   |   |   polarity <= -0.275: positive (5.0)
+|   |   |   |   |   |   |   polarity > -0.275: negative (2.0)
+|   |   |   |   |   |   compound > 0.2244: negative (32.0/19.0)
+|   |   |   |   |   polarity > -0.216667
+|   |   |   |   |   |   compound <= 0.3384
+|   |   |   |   |   |   |   compound <= 0.2055: neutral (34.0/17.0)
+|   |   |   |   |   |   |   compound > 0.2055: positive (221.0/134.0)
+|   |   |   |   |   |   compound > 0.3384
+|   |   |   |   |   |   |   compound <= 0.347
+|   |   |   |   |   |   |   |   polarity <= 0.009615
+|   |   |   |   |   |   |   |   |   compound <= 0.34: neutral (51.0/30.0)
+|   |   |   |   |   |   |   |   |   compound > 0.34: negative (2.0/1.0)
+|   |   |   |   |   |   |   |   polarity > 0.009615
+|   |   |   |   |   |   |   |   |   compound <= 0.3406
+|   |   |   |   |   |   |   |   |   |   polarity <= 0.206667
+|   |   |   |   |   |   |   |   |   |   |   polarity <= 0.165
+|   |   |   |   |   |   |   |   |   |   |   |   polarity <= 0.108929: positive (6.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   polarity > 0.108929: objective (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   polarity > 0.165: positive (2.0)
+|   |   |   |   |   |   |   |   |   |   polarity > 0.206667: negative (2.0/1.0)
+|   |   |   |   |   |   |   |   |   compound > 0.3406: positive (2.0/1.0)
+|   |   |   |   |   |   |   compound > 0.347
+|   |   |   |   |   |   |   |   compound <= 0.3597
+|   |   |   |   |   |   |   |   |   compound <= 0.3595
+|   |   |   |   |   |   |   |   |   |   polarity <= -0.05: positive (2.0)
+|   |   |   |   |   |   |   |   |   |   polarity > -0.05: neutral (5.0/2.0)
+|   |   |   |   |   |   |   |   |   compound > 0.3595: positive (2.0)
+|   |   |   |   |   |   |   |   compound > 0.3597
+|   |   |   |   |   |   |   |   |   polarity <= -0.140278: negative (5.0/2.0)
+|   |   |   |   |   |   |   |   |   polarity > -0.140278: neutral (76.0/39.0)
+|   |   |   polarity > 0.2525: positive (147.0/65.0)
+compound > 0.3695: positive (3055.0/839.0)
+
+Number of Leaves  : 	43
+
+Size of the tree : 	85
+
+
+Time taken to build model: 0.04 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3834               53.029  %
+Incorrectly Classified Instances      3396               46.971  %
+Kappa statistic                          0.3092
+Mean absolute error                      0.294 
+Root mean squared error                  0.3876
+Relative absolute error                 84.9048 %
+Root relative squared error             93.1495 %
+Total Number of Instances             7230     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.760    0.322    0.662      0.760    0.708      0.436    0.742     0.658     positive
+                 0.513    0.122    0.478      0.513    0.495      0.380    0.737     0.418     negative
+                 0.131    0.072    0.332      0.131    0.188      0.087    0.624     0.298     neutral
+                 0.427    0.162    0.323      0.427    0.367      0.237    0.695     0.273     objective
+Weighted Avg.    0.530    0.208    0.507      0.530    0.506      0.321    0.709     0.479     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 2496  306  150  332 |    a = positive
+  367  663   96  167 |    b = negative
+  565  287  203  492 |    c = neutral
+  340  131  163  472 |    d = objective
+
+
+
+-----------------------------------------------------------------------------
+
+SMO
+
+-----------------------------------------------------------------------------
+
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     opinion
+Instances:    7230
+Attributes:   5
+              category
+              neg_score
+              neu_score
+              pos_score
+              compund_score
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: positive, negative
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         1.755  * (normalized) neg_score
+ +      -1.8042 * (normalized) neu_score
+ +       0.0586 * (normalized) pos_score
+ +      -3.1166 * (normalized) compund_score
+ +       2.354 
+
+Number of kernel evaluations: 456119 (74.462% cached)
+
+Classifier for classes: positive, neutral
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -3.5929 * (normalized) neg_score
+ +       3.3339 * (normalized) neu_score
+ +       0.2677 * (normalized) pos_score
+ +      -4.4089 * (normalized) compund_score
+ -       0.1432
+
+Number of kernel evaluations: 372374 (69.681% cached)
+
+Classifier for classes: positive, objective
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -2.6218 * (normalized) neg_score
+ +       2.2722 * (normalized) neu_score
+ +       0.3586 * (normalized) pos_score
+ +      -1.9491 * (normalized) compund_score
+ -       1.4973
+
+Number of kernel evaluations: 101025 (60.455% cached)
+
+Classifier for classes: negative, neutral
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -4.8718 * (normalized) neg_score
+ +       3.0893 * (normalized) neu_score
+ +       1.8575 * (normalized) pos_score
+ +       0.8765 * (normalized) compund_score
+ -       2.5242
+
+Number of kernel evaluations: 421146 (87.017% cached)
+
+Classifier for classes: negative, objective
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -3.9362 * (normalized) neg_score
+ +       4.5723 * (normalized) neu_score
+ +      -0.6687 * (normalized) pos_score
+ +       2.6551 * (normalized) compund_score
+ -       4.891 
+
+Number of kernel evaluations: 226924 (84.727% cached)
+
+Classifier for classes: neutral, objective
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0006 * (normalized) neg_score
+ +      -0.0014 * (normalized) neu_score
+ +      -0.0026 * (normalized) pos_score
+ +       0.001  * (normalized) compund_score
+ -       0.9994
+
+Number of kernel evaluations: 59808 (53.052% cached)
+
+
+
+Time taken to build model: 0.6 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3820               52.8354 %
+Incorrectly Classified Instances      3410               47.1646 %
+Kappa statistic                          0.2915
+Mean absolute error                      0.3183
+Root mean squared error                  0.4065
+Relative absolute error                 91.9149 %
+Root relative squared error             97.6952 %
+Total Number of Instances             7230     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.755    0.332    0.655      0.755    0.701      0.422    0.721     0.621     positive
+                 0.462    0.093    0.520      0.462    0.489      0.387    0.729     0.381     negative
+                 0.480    0.273    0.324      0.480    0.387      0.183    0.609     0.271     neutral
+                 0.000    0.000    ?          0.000    ?          ?        0.637     0.207     objective
+Weighted Avg.    0.528    0.226    ?          0.528    ?          ?        0.686     0.440     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 2481  243  560    0 |    a = positive
+  405  597  291    0 |    b = negative
+  589  216  742    0 |    c = neutral
+  315   93  698    0 |    d = objective
+
+
+
+-----------------------------------------------------------------------------
+
+NBays
+
+-----------------------------------------------------------------------------
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     opinion
+Instances:    7230
+Attributes:   5
+              category
+              neg_score
+              neu_score
+              pos_score
+              compund_score
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                    Class
+Attribute        positive  negative   neutral objective
+                   (0.45)    (0.18)    (0.21)    (0.15)
+========================================================
+neg_score
+  mean              0.0333    0.1297    0.0398    0.0222
+  std. dev.         0.0726    0.1224    0.0802    0.0598
+  weight sum          3284      1293      1547      1106
+  precision         0.0024    0.0024    0.0024    0.0024
+
+neu_score
+  mean              0.7631    0.7865    0.8782    0.9185
+  std. dev.         0.1473     0.145    0.1312     0.114
+  weight sum          3284      1293      1547      1106
+  precision         0.0016    0.0016    0.0016    0.0016
+
+pos_score
+  mean              0.2035    0.0837    0.0817    0.0589
+  std. dev.          0.143    0.1072    0.1091    0.0982
+  weight sum          3284      1293      1547      1106
+  precision         0.0016    0.0016    0.0016    0.0016
+
+compund_score
+  mean              0.4375   -0.1271    0.1094     0.095
+  std. dev.         0.3928    0.4523    0.3564    0.3051
+  weight sum          3284      1293      1547      1106
+  precision         0.0014    0.0014    0.0014    0.0014
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3779               52.2683 %
+Incorrectly Classified Instances      3451               47.7317 %
+Kappa statistic                          0.3164
+Mean absolute error                      0.2602
+Root mean squared error                  0.4059
+Relative absolute error                 75.1524 %
+Root relative squared error             97.5478 %
+Total Number of Instances             7230     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.722    0.266    0.693      0.722    0.708      0.455    0.770     0.737     positive
+                 0.470    0.098    0.510      0.470    0.489      0.384    0.769     0.455     negative
+                 0.047    0.030    0.303      0.047    0.082      0.040    0.654     0.297     neutral
+                 0.656    0.269    0.306      0.656    0.417      0.297    0.735     0.285     objective
+Weighted Avg.    0.523    0.186    0.518      0.523    0.490      0.329    0.740     0.523     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 2372  269   46  597 |    a = positive
+  310  608   92  283 |    b = negative
+  480  224   73  770 |    c = neutral
+  259   91   30  726 |    d = objective
+
+

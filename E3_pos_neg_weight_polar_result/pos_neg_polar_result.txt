@@ -1,0 +1,755 @@
+
+
+---------------------------------------------------------------------
+
+J48
+
+---------------------------------------------------------------------
+
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     opinion
+Instances:    7230
+Attributes:   6
+              category
+              pnumber
+              nnumber
+              weight
+              polarity
+              question_mark
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+polarity <= 0.140693
+|   polarity <= -0.175
+|   |   weight <= 0.746423
+|   |   |   pnumber <= 0
+|   |   |   |   weight <= 0.507921: negative (183.0/74.0)
+|   |   |   |   weight > 0.507921
+|   |   |   |   |   polarity <= -0.375: negative (5.0)
+|   |   |   |   |   polarity > -0.375: neutral (15.0/6.0)
+|   |   |   pnumber > 0: negative (217.0/81.0)
+|   |   weight > 0.746423
+|   |   |   polarity <= -0.416667: negative (19.0/8.0)
+|   |   |   polarity > -0.416667
+|   |   |   |   weight <= 2.132822
+|   |   |   |   |   question_mark = yes
+|   |   |   |   |   |   pnumber <= 1
+|   |   |   |   |   |   |   pnumber <= 0
+|   |   |   |   |   |   |   |   polarity <= -0.24: positive (2.0/1.0)
+|   |   |   |   |   |   |   |   polarity > -0.24: neutral (4.0)
+|   |   |   |   |   |   |   pnumber > 0
+|   |   |   |   |   |   |   |   weight <= 1.126859: neutral (22.0/10.0)
+|   |   |   |   |   |   |   |   weight > 1.126859
+|   |   |   |   |   |   |   |   |   polarity <= -0.2625: negative (2.0)
+|   |   |   |   |   |   |   |   |   polarity > -0.2625: objective (3.0)
+|   |   |   |   |   |   pnumber > 1
+|   |   |   |   |   |   |   weight <= 1.545861: negative (11.0/5.0)
+|   |   |   |   |   |   |   weight > 1.545861: positive (3.0/1.0)
+|   |   |   |   |   question_mark = no
+|   |   |   |   |   |   pnumber <= 0
+|   |   |   |   |   |   |   polarity <= -0.211111
+|   |   |   |   |   |   |   |   weight <= 0.88051: neutral (4.0/1.0)
+|   |   |   |   |   |   |   |   weight > 0.88051
+|   |   |   |   |   |   |   |   |   weight <= 1.287251: negative (15.0/4.0)
+|   |   |   |   |   |   |   |   |   weight > 1.287251: positive (3.0/1.0)
+|   |   |   |   |   |   |   polarity > -0.211111
+|   |   |   |   |   |   |   |   weight <= 1.047199: objective (3.0/1.0)
+|   |   |   |   |   |   |   |   weight > 1.047199: positive (4.0/2.0)
+|   |   |   |   |   |   pnumber > 0
+|   |   |   |   |   |   |   polarity <= -0.4: positive (98.0/63.0)
+|   |   |   |   |   |   |   polarity > -0.4
+|   |   |   |   |   |   |   |   polarity <= -0.20625
+|   |   |   |   |   |   |   |   |   polarity <= -0.233333
+|   |   |   |   |   |   |   |   |   |   pnumber <= 2
+|   |   |   |   |   |   |   |   |   |   |   polarity <= -0.321429: neutral (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   polarity > -0.321429
+|   |   |   |   |   |   |   |   |   |   |   |   pnumber <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.043665
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 0.88051: objective (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 0.88051
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= -0.275: positive (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity > -0.275: objective (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.043665
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= -0.29375: neutral (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity > -0.29375
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= -0.275: negative (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity > -0.275
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.649807: negative (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.649807: positive (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   pnumber > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= -0.254167: negative (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   polarity > -0.254167: neutral (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   pnumber > 2: positive (3.0/1.0)
+|   |   |   |   |   |   |   |   |   polarity > -0.233333
+|   |   |   |   |   |   |   |   |   |   pnumber <= 1: positive (3.0)
+|   |   |   |   |   |   |   |   |   |   pnumber > 1
+|   |   |   |   |   |   |   |   |   |   |   weight <= 1.129398: negative (3.0)
+|   |   |   |   |   |   |   |   |   |   |   weight > 1.129398: positive (2.0)
+|   |   |   |   |   |   |   |   polarity > -0.20625: neutral (47.0/26.0)
+|   |   |   |   weight > 2.132822
+|   |   |   |   |   pnumber <= 2
+|   |   |   |   |   |   weight <= 2.890398
+|   |   |   |   |   |   |   pnumber <= 1
+|   |   |   |   |   |   |   |   polarity <= -0.211111: negative (3.0)
+|   |   |   |   |   |   |   |   polarity > -0.211111: neutral (3.0/1.0)
+|   |   |   |   |   |   |   pnumber > 1
+|   |   |   |   |   |   |   |   polarity <= -0.333333: neutral (3.0/1.0)
+|   |   |   |   |   |   |   |   polarity > -0.333333: positive (6.0/2.0)
+|   |   |   |   |   |   weight > 2.890398: negative (9.0/4.0)
+|   |   |   |   |   pnumber > 2: negative (7.0/1.0)
+|   polarity > -0.175
+|   |   pnumber <= 1
+|   |   |   weight <= -0.197454
+|   |   |   |   question_mark = yes
+|   |   |   |   |   weight <= -0.779838
+|   |   |   |   |   |   weight <= -3.501416: positive (3.0/1.0)
+|   |   |   |   |   |   weight > -3.501416: objective (5.0/2.0)
+|   |   |   |   |   weight > -0.779838: negative (4.0/1.0)
+|   |   |   |   question_mark = no
+|   |   |   |   |   pnumber <= 0
+|   |   |   |   |   |   polarity <= -0.09375: neutral (5.0/2.0)
+|   |   |   |   |   |   polarity > -0.09375
+|   |   |   |   |   |   |   weight <= -0.420573
+|   |   |   |   |   |   |   |   weight <= -0.604293
+|   |   |   |   |   |   |   |   |   polarity <= -0.03: negative (2.0)
+|   |   |   |   |   |   |   |   |   polarity > -0.03
+|   |   |   |   |   |   |   |   |   |   weight <= -4.17625: negative (4.0)
+|   |   |   |   |   |   |   |   |   |   weight > -4.17625
+|   |   |   |   |   |   |   |   |   |   |   weight <= -1.308982: positive (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   weight > -1.308982: negative (5.0/1.0)
+|   |   |   |   |   |   |   |   weight > -0.604293: positive (4.0)
+|   |   |   |   |   |   |   weight > -0.420573: negative (4.0/1.0)
+|   |   |   |   |   pnumber > 0
+|   |   |   |   |   |   weight <= -0.330584: negative (26.0/14.0)
+|   |   |   |   |   |   weight > -0.330584
+|   |   |   |   |   |   |   weight <= -0.237141: objective (5.0/1.0)
+|   |   |   |   |   |   |   weight > -0.237141: positive (2.0/1.0)
+|   |   |   weight > -0.197454
+|   |   |   |   question_mark = yes
+|   |   |   |   |   polarity <= -0.052778
+|   |   |   |   |   |   pnumber <= 0
+|   |   |   |   |   |   |   polarity <= -0.116667
+|   |   |   |   |   |   |   |   polarity <= -0.152778
+|   |   |   |   |   |   |   |   |   polarity <= -0.15625
+|   |   |   |   |   |   |   |   |   |   polarity <= -0.1625: neutral (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   polarity > -0.1625: negative (2.0)
+|   |   |   |   |   |   |   |   |   polarity > -0.15625: neutral (2.0)
+|   |   |   |   |   |   |   |   polarity > -0.152778: positive (10.0/4.0)
+|   |   |   |   |   |   |   polarity > -0.116667
+|   |   |   |   |   |   |   |   weight <= 0.156352: negative (5.0/1.0)
+|   |   |   |   |   |   |   |   weight > 0.156352
+|   |   |   |   |   |   |   |   |   polarity <= -0.096212: objective (3.0/1.0)
+|   |   |   |   |   |   |   |   |   polarity > -0.096212: neutral (5.0/2.0)
+|   |   |   |   |   |   pnumber > 0: positive (25.0/15.0)
+|   |   |   |   |   polarity > -0.052778
+|   |   |   |   |   |   polarity <= 0.053125
+|   |   |   |   |   |   |   polarity <= -0.05
+|   |   |   |   |   |   |   |   weight <= 0.985429: neutral (5.0/1.0)
+|   |   |   |   |   |   |   |   weight > 0.985429: objective (6.0/1.0)
+|   |   |   |   |   |   |   polarity > -0.05
+|   |   |   |   |   |   |   |   polarity <= -0.022222
+|   |   |   |   |   |   |   |   |   polarity <= -0.035714: positive (4.0/2.0)
+|   |   |   |   |   |   |   |   |   polarity > -0.035714
+|   |   |   |   |   |   |   |   |   |   polarity <= -0.032917: negative (3.0)
+|   |   |   |   |   |   |   |   |   |   polarity > -0.032917: objective (4.0/2.0)
+|   |   |   |   |   |   |   |   polarity > -0.022222: neutral (307.0/174.0)
+|   |   |   |   |   |   polarity > 0.053125
+|   |   |   |   |   |   |   pnumber <= 0
+|   |   |   |   |   |   |   |   polarity <= 0.134615
+|   |   |   |   |   |   |   |   |   weight <= 0.515154: neutral (5.0/2.0)
+|   |   |   |   |   |   |   |   |   weight > 0.515154
+|   |   |   |   |   |   |   |   |   |   weight <= 1.192788: negative (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   weight > 1.192788
+|   |   |   |   |   |   |   |   |   |   |   weight <= 1.501188: neutral (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   weight > 1.501188: objective (7.0/4.0)
+|   |   |   |   |   |   |   |   polarity > 0.134615: positive (4.0/2.0)
+|   |   |   |   |   |   |   pnumber > 0
+|   |   |   |   |   |   |   |   weight <= 0.373813: objective (9.0/4.0)
+|   |   |   |   |   |   |   |   weight > 0.373813
+|   |   |   |   |   |   |   |   |   polarity <= 0.125
+|   |   |   |   |   |   |   |   |   |   weight <= 0.746423: positive (3.0)
+|   |   |   |   |   |   |   |   |   |   weight > 0.746423
+|   |   |   |   |   |   |   |   |   |   |   polarity <= 0.072222: positive (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   polarity > 0.072222: objective (5.0/2.0)
+|   |   |   |   |   |   |   |   |   polarity > 0.125: positive (9.0/3.0)
+|   |   |   |   question_mark = no
+|   |   |   |   |   polarity <= -0.008333
+|   |   |   |   |   |   pnumber <= 0
+|   |   |   |   |   |   |   polarity <= -0.052778
+|   |   |   |   |   |   |   |   polarity <= -0.1625: positive (26.0/16.0)
+|   |   |   |   |   |   |   |   polarity > -0.1625
+|   |   |   |   |   |   |   |   |   polarity <= -0.152778: objective (24.0/11.0)
+|   |   |   |   |   |   |   |   |   polarity > -0.152778
+|   |   |   |   |   |   |   |   |   |   polarity <= -0.096212
+|   |   |   |   |   |   |   |   |   |   |   polarity <= -0.1375: negative (12.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   polarity > -0.1375
+|   |   |   |   |   |   |   |   |   |   |   |   weight <= 0.243563
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 0.086996: negative (20.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight > 0.086996: neutral (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   weight > 0.243563
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.009848
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 0.577894
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= -0.1125: objective (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity > -0.1125: positive (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 0.577894
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 0.98738: negative (6.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 0.98738: positive (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.009848
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= -0.101852
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= -0.129167: neutral (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity > -0.129167: negative (8.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity > -0.101852: objective (19.0/11.0)
+|   |   |   |   |   |   |   |   |   |   polarity > -0.096212
+|   |   |   |   |   |   |   |   |   |   |   polarity <= -0.061111
+|   |   |   |   |   |   |   |   |   |   |   |   polarity <= -0.063889
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 0.156352
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= -0.081818
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= -0.047187: objective (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > -0.047187: negative (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity > -0.081818: objective (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight > 0.156352
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= -0.069444
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 0.680721
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 0.462178: positive (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 0.462178: objective (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 0.680721
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.039306: neutral (7.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.039306
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.786016: positive (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.786016: neutral (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity > -0.069444
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 0.656813: positive (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 0.656813: negative (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   polarity > -0.063889
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.362525: objective (7.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.362525: neutral (2.0)
+|   |   |   |   |   |   |   |   |   |   |   polarity > -0.061111: objective (6.0/1.0)
+|   |   |   |   |   |   |   polarity > -0.052778
+|   |   |   |   |   |   |   |   weight <= 1.57838
+|   |   |   |   |   |   |   |   |   weight <= 0.580567: negative (6.0/2.0)
+|   |   |   |   |   |   |   |   |   weight > 0.580567: positive (22.0/10.0)
+|   |   |   |   |   |   |   |   weight > 1.57838
+|   |   |   |   |   |   |   |   |   polarity <= -0.022222
+|   |   |   |   |   |   |   |   |   |   polarity <= -0.045833: neutral (2.0)
+|   |   |   |   |   |   |   |   |   |   polarity > -0.045833
+|   |   |   |   |   |   |   |   |   |   |   polarity <= -0.031469: negative (3.0)
+|   |   |   |   |   |   |   |   |   |   |   polarity > -0.031469: neutral (2.0)
+|   |   |   |   |   |   |   |   |   polarity > -0.022222: negative (2.0/1.0)
+|   |   |   |   |   |   pnumber > 0
+|   |   |   |   |   |   |   weight <= 0.086996: positive (60.0/33.0)
+|   |   |   |   |   |   |   weight > 0.086996
+|   |   |   |   |   |   |   |   weight <= 0.850694
+|   |   |   |   |   |   |   |   |   weight <= 0.532143
+|   |   |   |   |   |   |   |   |   |   weight <= 0.448131
+|   |   |   |   |   |   |   |   |   |   |   polarity <= -0.061111: objective (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   polarity > -0.061111: negative (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   weight > 0.448131: positive (2.0)
+|   |   |   |   |   |   |   |   |   weight > 0.532143
+|   |   |   |   |   |   |   |   |   |   weight <= 0.706293
+|   |   |   |   |   |   |   |   |   |   |   polarity <= -0.1: negative (4.0)
+|   |   |   |   |   |   |   |   |   |   |   polarity > -0.1
+|   |   |   |   |   |   |   |   |   |   |   |   polarity <= -0.075: neutral (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   polarity > -0.075: negative (7.0/3.0)
+|   |   |   |   |   |   |   |   |   |   weight > 0.706293: neutral (10.0/4.0)
+|   |   |   |   |   |   |   |   weight > 0.850694
+|   |   |   |   |   |   |   |   |   polarity <= -0.096212
+|   |   |   |   |   |   |   |   |   |   polarity <= -0.15
+|   |   |   |   |   |   |   |   |   |   |   polarity <= -0.158333: positive (3.0)
+|   |   |   |   |   |   |   |   |   |   |   polarity > -0.158333: objective (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   polarity > -0.15
+|   |   |   |   |   |   |   |   |   |   |   polarity <= -0.1375: negative (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   polarity > -0.1375
+|   |   |   |   |   |   |   |   |   |   |   |   polarity <= -0.118056
+|   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= -0.133333
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.283311: positive (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.283311: neutral (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   polarity > -0.133333: objective (6.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   polarity > -0.118056: neutral (15.0/7.0)
+|   |   |   |   |   |   |   |   |   polarity > -0.096212
+|   |   |   |   |   |   |   |   |   |   polarity <= -0.016667
+|   |   |   |   |   |   |   |   |   |   |   polarity <= -0.077778: objective (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   polarity > -0.077778
+|   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.589969
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.015802: positive (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.015802
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.088466: negative (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.088466
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.290157: objective (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.290157: negative (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   weight > 1.589969: positive (21.0/9.0)
+|   |   |   |   |   |   |   |   |   |   polarity > -0.016667: objective (3.0)
+|   |   |   |   |   polarity > -0.008333
+|   |   |   |   |   |   weight <= 0.938729
+|   |   |   |   |   |   |   polarity <= 0.134615
+|   |   |   |   |   |   |   |   pnumber <= 0
+|   |   |   |   |   |   |   |   |   polarity <= 0.091667
+|   |   |   |   |   |   |   |   |   |   polarity <= 0.015
+|   |   |   |   |   |   |   |   |   |   |   weight <= 0.706293
+|   |   |   |   |   |   |   |   |   |   |   |   weight <= 0.287341: positive (848.0/574.0)
+|   |   |   |   |   |   |   |   |   |   |   |   weight > 0.287341: neutral (69.0/41.0)
+|   |   |   |   |   |   |   |   |   |   |   weight > 0.706293
+|   |   |   |   |   |   |   |   |   |   |   |   weight <= 0.83751
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 0.78562: positive (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight > 0.78562: negative (7.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   weight > 0.83751: positive (13.0/6.0)
+|   |   |   |   |   |   |   |   |   |   polarity > 0.015
+|   |   |   |   |   |   |   |   |   |   |   weight <= 0.050604
+|   |   |   |   |   |   |   |   |   |   |   |   weight <= -0.015351: negative (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   weight > -0.015351
+|   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= 0.027841: negative (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   polarity > 0.027841: positive (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   weight > 0.050604
+|   |   |   |   |   |   |   |   |   |   |   |   polarity <= 0.025: negative (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   polarity > 0.025: objective (13.0/3.0)
+|   |   |   |   |   |   |   |   |   polarity > 0.091667
+|   |   |   |   |   |   |   |   |   |   polarity <= 0.122222
+|   |   |   |   |   |   |   |   |   |   |   weight <= 0.712108: positive (29.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   weight > 0.712108: neutral (8.0/3.0)
+|   |   |   |   |   |   |   |   |   |   polarity > 0.122222
+|   |   |   |   |   |   |   |   |   |   |   weight <= 0.782752: negative (8.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   weight > 0.782752: neutral (2.0)
+|   |   |   |   |   |   |   |   pnumber > 0
+|   |   |   |   |   |   |   |   |   polarity <= 0.034091
+|   |   |   |   |   |   |   |   |   |   weight <= 0.257734: positive (470.0/316.0)
+|   |   |   |   |   |   |   |   |   |   weight > 0.257734
+|   |   |   |   |   |   |   |   |   |   |   weight <= 0.908322: objective (70.0/46.0)
+|   |   |   |   |   |   |   |   |   |   |   weight > 0.908322: neutral (5.0/2.0)
+|   |   |   |   |   |   |   |   |   polarity > 0.034091: positive (72.0/41.0)
+|   |   |   |   |   |   |   polarity > 0.134615: objective (34.0/21.0)
+|   |   |   |   |   |   weight > 0.938729
+|   |   |   |   |   |   |   weight <= 1.1335
+|   |   |   |   |   |   |   |   pnumber <= 0: objective (104.0/52.0)
+|   |   |   |   |   |   |   |   pnumber > 0
+|   |   |   |   |   |   |   |   |   polarity <= 0.096429
+|   |   |   |   |   |   |   |   |   |   weight <= 1.017653
+|   |   |   |   |   |   |   |   |   |   |   weight <= 0.966463
+|   |   |   |   |   |   |   |   |   |   |   |   weight <= 0.954961: positive (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   weight > 0.954961: neutral (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   weight > 0.966463: positive (2.0)
+|   |   |   |   |   |   |   |   |   |   weight > 1.017653
+|   |   |   |   |   |   |   |   |   |   |   weight <= 1.104798: objective (35.0/15.0)
+|   |   |   |   |   |   |   |   |   |   |   weight > 1.104798
+|   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.122143: positive (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   weight > 1.122143
+|   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= 0.016667: neutral (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   polarity > 0.016667: positive (2.0/1.0)
+|   |   |   |   |   |   |   |   |   polarity > 0.096429: positive (30.0/15.0)
+|   |   |   |   |   |   |   weight > 1.1335
+|   |   |   |   |   |   |   |   pnumber <= 0
+|   |   |   |   |   |   |   |   |   weight <= 1.447007: positive (52.0/27.0)
+|   |   |   |   |   |   |   |   |   weight > 1.447007
+|   |   |   |   |   |   |   |   |   |   polarity <= 0.027841
+|   |   |   |   |   |   |   |   |   |   |   weight <= 1.92232
+|   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.518618
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.460113: neutral (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.460113: objective (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   weight > 1.518618
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.551557: positive (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.551557
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.797421
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.782837: neutral (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.782837: objective (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.797421: neutral (6.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   weight > 1.92232
+|   |   |   |   |   |   |   |   |   |   |   |   weight <= 2.628713
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 2.561092: objective (16.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight > 2.561092: negative (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   weight > 2.628713
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 3.071462: positive (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight > 3.071462: objective (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   polarity > 0.027841
+|   |   |   |   |   |   |   |   |   |   |   polarity <= 0.1125: neutral (41.0/21.0)
+|   |   |   |   |   |   |   |   |   |   |   polarity > 0.1125
+|   |   |   |   |   |   |   |   |   |   |   |   polarity <= 0.126667
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.877147: positive (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.877147: negative (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   polarity > 0.126667: objective (8.0/3.0)
+|   |   |   |   |   |   |   |   pnumber > 0
+|   |   |   |   |   |   |   |   |   weight <= 2.543254
+|   |   |   |   |   |   |   |   |   |   weight <= 2.035318
+|   |   |   |   |   |   |   |   |   |   |   weight <= 1.601671
+|   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.433393
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.353806: positive (29.0/16.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.353806
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= 0.0125: objective (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity > 0.0125: neutral (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   weight > 1.433393: positive (17.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   weight > 1.601671
+|   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.952772
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 1.794998: objective (16.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   weight > 1.794998
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= 0.052778: neutral (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity > 0.052778: positive (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   weight > 1.952772: objective (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   weight > 2.035318: positive (26.0/9.0)
+|   |   |   |   |   |   |   |   |   weight > 2.543254
+|   |   |   |   |   |   |   |   |   |   weight <= 2.860148: neutral (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   weight > 2.860148
+|   |   |   |   |   |   |   |   |   |   |   polarity <= 0.097222
+|   |   |   |   |   |   |   |   |   |   |   |   weight <= 3.499356
+|   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= 0.075
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= 0.008333
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 3.034287
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 2.999741: negative (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 2.999741: objective (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 3.034287: negative (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   polarity > 0.008333
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight <= 3.330822: positive (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   weight > 3.330822: neutral (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   polarity > 0.075: negative (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   weight > 3.499356: neutral (3.0)
+|   |   |   |   |   |   |   |   |   |   |   polarity > 0.097222
+|   |   |   |   |   |   |   |   |   |   |   |   polarity <= 0.108929: positive (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   polarity > 0.108929
+|   |   |   |   |   |   |   |   |   |   |   |   |   polarity <= 0.126667: objective (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   polarity > 0.126667: positive (2.0/1.0)
+|   |   pnumber > 1
+|   |   |   pnumber <= 2
+|   |   |   |   question_mark = yes
+|   |   |   |   |   polarity <= 0.018182
+|   |   |   |   |   |   polarity <= -0.013889
+|   |   |   |   |   |   |   polarity <= -0.116667: neutral (3.0/1.0)
+|   |   |   |   |   |   |   polarity > -0.116667: negative (6.0/2.0)
+|   |   |   |   |   |   polarity > -0.013889
+|   |   |   |   |   |   |   weight <= 0.373813: positive (26.0/16.0)
+|   |   |   |   |   |   |   weight > 0.373813
+|   |   |   |   |   |   |   |   weight <= 0.938729: objective (2.0)
+|   |   |   |   |   |   |   |   weight > 0.938729
+|   |   |   |   |   |   |   |   |   weight <= 1.455066: neutral (3.0/1.0)
+|   |   |   |   |   |   |   |   |   weight > 1.455066: positive (3.0/1.0)
+|   |   |   |   |   polarity > 0.018182
+|   |   |   |   |   |   polarity <= 0.1
+|   |   |   |   |   |   |   polarity <= 0.068182: neutral (5.0)
+|   |   |   |   |   |   |   polarity > 0.068182: negative (7.0/1.0)
+|   |   |   |   |   |   polarity > 0.1: positive (4.0/1.0)
+|   |   |   |   question_mark = no
+|   |   |   |   |   weight <= 0.238142
+|   |   |   |   |   |   weight <= -1.969128
+|   |   |   |   |   |   |   polarity <= -0.071429: negative (4.0)
+|   |   |   |   |   |   |   polarity > -0.071429: positive (4.0/1.0)
+|   |   |   |   |   |   weight > -1.969128: neutral (219.0/141.0)
+|   |   |   |   |   weight > 0.238142: positive (253.0/135.0)
+|   |   |   pnumber > 2
+|   |   |   |   weight <= 0.791372
+|   |   |   |   |   question_mark = yes
+|   |   |   |   |   |   pnumber <= 3: positive (8.0/4.0)
+|   |   |   |   |   |   pnumber > 3
+|   |   |   |   |   |   |   polarity <= -0.038095: positive (2.0/1.0)
+|   |   |   |   |   |   |   polarity > -0.038095: neutral (3.0)
+|   |   |   |   |   question_mark = no
+|   |   |   |   |   |   pnumber <= 3
+|   |   |   |   |   |   |   weight <= 0.564929
+|   |   |   |   |   |   |   |   weight <= 0.440651
+|   |   |   |   |   |   |   |   |   weight <= 0.184838
+|   |   |   |   |   |   |   |   |   |   polarity <= -0.101852: negative (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   polarity > -0.101852: positive (43.0/25.0)
+|   |   |   |   |   |   |   |   |   weight > 0.184838: neutral (3.0/1.0)
+|   |   |   |   |   |   |   |   weight > 0.440651: negative (3.0)
+|   |   |   |   |   |   |   weight > 0.564929: neutral (5.0/2.0)
+|   |   |   |   |   |   pnumber > 3: positive (13.0/7.0)
+|   |   |   |   weight > 0.791372
+|   |   |   |   |   question_mark = yes
+|   |   |   |   |   |   polarity <= 0.083333: positive (10.0/2.0)
+|   |   |   |   |   |   polarity > 0.083333: objective (5.0/2.0)
+|   |   |   |   |   question_mark = no
+|   |   |   |   |   |   polarity <= -0.116667
+|   |   |   |   |   |   |   polarity <= -0.141111
+|   |   |   |   |   |   |   |   weight <= 0.939446: positive (2.0)
+|   |   |   |   |   |   |   |   weight > 0.939446: negative (2.0)
+|   |   |   |   |   |   |   polarity > -0.141111: objective (4.0/1.0)
+|   |   |   |   |   |   polarity > -0.116667: positive (78.0/24.0)
+polarity > 0.140693: positive (2719.0/833.0)
+
+Number of Leaves  : 	221
+
+Size of the tree : 	441
+
+
+Time taken to build model: 0.11 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3500               48.4094 %
+Incorrectly Classified Instances      3730               51.5906 %
+Kappa statistic                          0.1578
+Mean absolute error                      0.3112
+Root mean squared error                  0.407 
+Relative absolute error                 89.883  %
+Root relative squared error             97.8275 %
+Total Number of Instances             7230     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.854    0.663    0.518      0.854    0.645      0.220    0.701     0.623     positive
+                 0.252    0.061    0.475      0.252    0.329      0.250    0.647     0.318     negative
+                 0.154    0.085    0.331      0.154    0.211      0.095    0.595     0.268     neutral
+                 0.117    0.044    0.322      0.117    0.171      0.114    0.657     0.245     objective
+Weighted Avg.    0.484    0.337    0.440      0.484    0.423      0.183    0.662     0.435     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 2806  153  209  116 |    a = positive
+  769  326  141   57 |    b = negative
+ 1078  131  239   99 |    c = neutral
+  769   76  132  129 |    d = objective
+
+
+
+
+---------------------------------------------------------------------
+
+SMO
+
+---------------------------------------------------------------------
+
+
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     opinion
+Instances:    7230
+Attributes:   6
+              category
+              pnumber
+              nnumber
+              weight
+              polarity
+              question_mark
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: positive, negative
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0      * (normalized) pnumber
+ +      -0      * (normalized) nnumber
+ +      -0.0037 * (normalized) weight
+ +      -0.0012 * (normalized) polarity
+ +      -0.001  * (normalized) question_mark=no
+ -       0.9966
+
+Number of kernel evaluations: 469133 (63.949% cached)
+
+Classifier for classes: positive, neutral
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.0006 * (normalized) pnumber
+ +      -0.0006 * (normalized) nnumber
+ +       0.0013 * (normalized) weight
+ +      -0.0006 * (normalized) polarity
+ +      -0.0002 * (normalized) question_mark=no
+ -       0.9999
+
+Number of kernel evaluations: 1051219 (55.776% cached)
+
+Classifier for classes: positive, objective
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0004 * (normalized) pnumber
+ +       0.0004 * (normalized) nnumber
+ +       0.0022 * (normalized) weight
+ +      -0.0005 * (normalized) polarity
+ +      -0.0002 * (normalized) question_mark=no
+ -       1.0012
+
+Number of kernel evaluations: 163000 (51.729% cached)
+
+Classifier for classes: negative, neutral
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -1.1421 * (normalized) pnumber
+ +      -1.1421 * (normalized) nnumber
+ +       2.7458 * (normalized) weight
+ +       3.5236 * (normalized) polarity
+ +      -0.3471 * (normalized) question_mark=no
+ -       2.2712
+
+Number of kernel evaluations: 164441 (67.383% cached)
+
+Classifier for classes: negative, objective
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -1.9434 * (normalized) pnumber
+ +      -1.9434 * (normalized) nnumber
+ +       3.3663 * (normalized) weight
+ +       3.2002 * (normalized) polarity
+ +       0.3114 * (normalized) question_mark=no
+ -       3.5727
+
+Number of kernel evaluations: 141442 (64.283% cached)
+
+Classifier for classes: neutral, objective
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.0002 * (normalized) pnumber
+ +      -0.0002 * (normalized) nnumber
+ +       0.0013 * (normalized) weight
+ +      -0.001  * (normalized) polarity
+ +       0.0007 * (normalized) question_mark=no
+ -       1.0005
+
+Number of kernel evaluations: 119922 (51.001% cached)
+
+
+
+Time taken to build model: 0.39 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3284               45.4219 %
+Incorrectly Classified Instances      3946               54.5781 %
+Kappa statistic                          0     
+Mean absolute error                      0.333 
+Root mean squared error                  0.4245
+Relative absolute error                 96.1555 %
+Root relative squared error            102.0177 %
+Total Number of Instances             7230     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.454      1.000    0.625      ?        0.500     0.454     positive
+                 0.000    0.000    ?          0.000    ?          ?        0.607     0.241     negative
+                 0.000    0.000    ?          0.000    ?          ?        0.505     0.216     neutral
+                 0.000    0.000    ?          0.000    ?          ?        0.520     0.159     objective
+Weighted Avg.    0.454    0.454    ?          0.454    ?          ?        0.523     0.320     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 3284    0    0    0 |    a = positive
+ 1293    0    0    0 |    b = negative
+ 1547    0    0    0 |    c = neutral
+ 1106    0    0    0 |    d = objective
+
+
+
+
+---------------------------------------------------------------------
+
+NBays
+
+---------------------------------------------------------------------
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     opinion
+Instances:    7230
+Attributes:   6
+              category
+              pnumber
+              nnumber
+              weight
+              polarity
+              question_mark
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                    Class
+Attribute        positive  negative   neutral objective
+                   (0.45)    (0.18)    (0.21)    (0.15)
+========================================================
+pnumber
+  mean               1.359    0.9227    0.8306    0.7052
+  std. dev.         1.1338    0.9473    0.9271    0.8322
+  weight sum          3284      1293      1547      1106
+  precision              1         1         1         1
+
+nnumber
+  mean               1.359    0.9227    0.8306    0.7052
+  std. dev.         1.1338    0.9473    0.9271    0.8322
+  weight sum          3284      1293      1547      1106
+  precision              1         1         1         1
+
+weight
+  mean              1.2136    0.4108     0.629    0.6428
+  std. dev.         1.6303    1.3958    1.1235     1.004
+  weight sum          3284      1293      1547      1106
+  precision         0.0149    0.0149    0.0149    0.0149
+
+polarity
+  mean              0.2413   -0.0274    0.0596    0.0393
+  std. dev.          0.305    0.2963    0.2339    0.1929
+  weight sum          3284      1293      1547      1106
+  precision         0.0023    0.0023    0.0023    0.0023
+
+question_mark
+  yes                367.0     195.0     293.0     146.0
+  no                2919.0    1100.0    1256.0     962.0
+  [total]           3286.0    1295.0    1549.0    1108.0
+
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3233               44.7165 %
+Incorrectly Classified Instances      3997               55.2835 %
+Kappa statistic                          0.2115
+Mean absolute error                      0.3055
+Root mean squared error                  0.4084
+Relative absolute error                 88.2162 %
+Root relative squared error             98.1463 %
+Total Number of Instances             7230     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.640    0.302    0.638      0.640    0.639      0.337    0.715     0.685     positive
+                 0.187    0.042    0.490      0.187    0.271      0.220    0.666     0.345     negative
+                 0.165    0.099    0.313      0.165    0.217      0.086    0.623     0.288     neutral
+                 0.573    0.325    0.242      0.573    0.340      0.186    0.674     0.237     objective
+Weighted Avg.    0.447    0.216    0.481      0.447    0.437      0.239    0.680     0.470     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 2101  109  254  820 |    a = positive
+  398  242  167  486 |    b = negative
+  513   93  256  685 |    c = neutral
+  282   50  140  634 |    d = objective

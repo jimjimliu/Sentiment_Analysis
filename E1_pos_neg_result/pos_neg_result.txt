@@ -1,0 +1,267 @@
+-----------------------------------------------------------------------------
+
+J48
+
+-----------------------------------------------------------------------------
+
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     opinion
+Instances:    7230
+Attributes:   3
+              category
+              pnumber
+              nnumber
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+: positive (7230.0/3946.0)
+
+Number of Leaves  : 	1
+
+Size of the tree : 	1
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3284               45.4219 %
+Incorrectly Classified Instances      3946               54.5781 %
+Kappa statistic                          0     
+Mean absolute error                      0.3463
+Root mean squared error                  0.4161
+Relative absolute error                 99.9949 %
+Root relative squared error            100      %
+Total Number of Instances             7230     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.454      1.000    0.625      ?        0.499     0.454     positive
+                 0.000    0.000    ?          0.000    ?          ?        0.499     0.179     negative
+                 0.000    0.000    ?          0.000    ?          ?        0.499     0.214     neutral
+                 0.000    0.000    ?          0.000    ?          ?        0.499     0.153     objective
+Weighted Avg.    0.454    0.454    ?          0.454    ?          ?        0.499     0.307     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 3284    0    0    0 |    a = positive
+ 1293    0    0    0 |    b = negative
+ 1547    0    0    0 |    c = neutral
+ 1106    0    0    0 |    d = objective
+
+
+
+
+-----------------------------------------------------------------------------
+
+SMO
+
+-----------------------------------------------------------------------------
+
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     opinion
+Instances:    7230
+Attributes:   3
+              category
+              pnumber
+              nnumber
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: positive, negative
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0      * (normalized) pnumber
+ +       0      * (normalized) nnumber
+ -       1     
+
+Number of kernel evaluations: 154561 (49.159% cached)
+
+Classifier for classes: positive, neutral
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0      * (normalized) pnumber
+ +      -0      * (normalized) nnumber
+ -       1     
+
+Number of kernel evaluations: 156708 (49.136% cached)
+
+Classifier for classes: positive, objective
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0      * (normalized) pnumber
+ +      -0      * (normalized) nnumber
+ -       1     
+
+Number of kernel evaluations: 98950 (48.967% cached)
+
+Classifier for classes: negative, neutral
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0      * (normalized) pnumber
+ +      -0      * (normalized) nnumber
+ +       1     
+
+Number of kernel evaluations: 52865 (48.925% cached)
+
+Classifier for classes: negative, objective
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0      * (normalized) pnumber
+ +       0      * (normalized) nnumber
+ -       1     
+
+Number of kernel evaluations: 36030 (49.183% cached)
+
+Classifier for classes: neutral, objective
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+ -       1     
+
+Number of kernel evaluations: 37823 (48.514% cached)
+
+
+
+Time taken to build model: 0.09 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3284               45.4219 %
+Incorrectly Classified Instances      3946               54.5781 %
+Kappa statistic                          0     
+Mean absolute error                      0.3359
+Root mean squared error                  0.4279
+Relative absolute error                 96.9977 %
+Root relative squared error            102.8399 %
+Total Number of Instances             7230     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    1.000    0.454      1.000    0.625      ?        0.500     0.454     positive
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.179     negative
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.214     neutral
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.153     objective
+Weighted Avg.    0.454    0.454    ?          0.454    ?          ?        0.500     0.307     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 3284    0    0    0 |    a = positive
+ 1293    0    0    0 |    b = negative
+ 1547    0    0    0 |    c = neutral
+ 1106    0    0    0 |    d = objective
+
+
+-----------------------------------------------------------------------------
+
+NBays
+
+-----------------------------------------------------------------------------
+
+
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     opinion
+Instances:    7230
+Attributes:   3
+              category
+              pnumber
+              nnumber
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                   Class
+Attribute       positive  negative   neutral objective
+                  (0.45)    (0.18)    (0.21)    (0.15)
+=======================================================
+pnumber
+  mean              1.359    0.9227    0.8306    0.7052
+  std. dev.        1.1338    0.9473    0.9271    0.8322
+  weight sum         3284      1293      1547      1106
+  precision             1         1         1         1
+
+nnumber
+  mean              1.359    0.9227    0.8306    0.7052
+  std. dev.        1.1338    0.9473    0.9271    0.8322
+  weight sum         3284      1293      1547      1106
+  precision             1         1         1         1
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3180               43.9834 %
+Incorrectly Classified Instances      4050               56.0166 %
+Kappa statistic                          0.1099
+Mean absolute error                      0.3326
+Root mean squared error                  0.4151
+Relative absolute error                 96.042  %
+Root relative squared error             99.7529 %
+Total Number of Instances             7230     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.759    0.563    0.529      0.759    0.623      0.205    0.634     0.586     positive
+                 0.000    0.000    ?          0.000    ?          ?        0.527     0.187     negative
+                 0.444    0.321    0.273      0.444    0.338      0.106    0.572     0.248     neutral
+                 0.000    0.000    ?          0.000    ?          ?        0.607     0.192     objective
+Weighted Avg.    0.440    0.325    ?          0.440    ?          ?        0.597     0.382     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 2493    0  791    0 |    a = positive
+  790    0  503    0 |    b = negative
+  860    0  687    0 |    c = neutral
+  573    0  533    0 |    d = objective
+
+
+
+
+
