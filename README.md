@@ -7,6 +7,9 @@ Testing the accuracy of results using Weka classification which based on SMO, J4
 Read academic research papers to get a better understanding of sentiment analysis, and different algorithms to calculate polarity scores;
 
 ## Demo
+### Twitter Message
 ![Image discription](https://github.com/jimjimliu/Sentiment_Analysis/blob/master/Image/original_twitter.jpg)
+### Weka Result
 ![Image discription](https://github.com/jimjimliu/Sentiment_Analysis/blob/master/Image/weka_result.jpg)
+### J48
 ![Image discription](https://github.com/jimjimliu/Sentiment_Analysis/blob/master/Image/j48.jpg)
